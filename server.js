@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 
 //Route imports
 import auth from './router/authentication'
+import events from './router/events'
 
 const PORT = 3000 || process.env.PORT
 
@@ -15,6 +16,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended:true}))
 
 app.use('/auth', auth)
+app.use('/events',events)
 
 app.get('/',(req,res)=>res.send("Welcome to Alask."))
 
