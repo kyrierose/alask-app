@@ -7,7 +7,7 @@ import UserModel from '../models/user'
 
 const router = express.Router()
 
-mongoose.connect("mongodb://localhost:27017/alask-db")
+mongoose.connect("mongodb://kyrierose:Kyrie2rose1@ds257241.mlab.com:57241/alask-app")
 
 connection.once('open',()=>{
     console.log("Connection Established!");
