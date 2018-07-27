@@ -8,7 +8,7 @@
     "start": "babel-watch server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "e2e": "protractor",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot --prod"
   },
   "repository": {
     "type": "git",
