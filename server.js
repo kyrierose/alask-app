@@ -15,10 +15,16 @@ app.use(bodyParser.json())
 app.use(cors())
 app.use(bodyParser.urlencoded({extended:true}))
 
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/alask-app'));
+
 app.use('/auth', auth)
 app.use('/events',events)
 
-app.get('/',(req,res)=>res.send("Welcome to Alask."))
+app.get('/*', function(req,res) {
+    
+res.sendFile(path.join(__dirname+'/dist/alask-app/index.html'));
+});
 
 //Handling Error 404
 app.get('**', (req, res)=>res.send("Error 404: You seems to have lost."))
