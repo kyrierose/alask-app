@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "ng": "ng",
-    "start": "babel-watch server.js",
     "build":"ng build",
+    "start": "babel-watch server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "e2e": "protractor",
     "postinstall": "ng build --aot --prod"
